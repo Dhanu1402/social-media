@@ -13,4 +13,7 @@
       5. npm run dev
 
 2. Layout structure
+
    1. add colors in tailwind.config.js
+
+3. Sidebar navigation
