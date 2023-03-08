@@ -17,3 +17,5 @@
    1. add colors in tailwind.config.js
 
 3. Sidebar navigation
+
+4. Post form
