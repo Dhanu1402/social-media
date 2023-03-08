@@ -19,3 +19,6 @@
 3. Sidebar navigation
 
 4. Post form
+
+5. Single post
+   1. npm i react-clickout-handler
