@@ -21,4 +21,7 @@
 4. Post form
 
 5. Single post
+
    1. npm i react-clickout-handler
+
+6. Animation on sidebar & dropdown
