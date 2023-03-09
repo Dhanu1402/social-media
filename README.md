@@ -27,3 +27,5 @@
 6. Animation on sidebar & dropdown
 
 7. Profile page
+
+8. Profile about / friends / photos

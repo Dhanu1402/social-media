@@ -3,8 +3,28 @@ import Card from '../components/Card';
 import Avatar from '../components/Avatar';
 import Link from 'next/link';
 import PostCard from '../components/PostCard';
+import { useRouter } from 'next/router';
+import FriendInfo from '../components/FriendInfo';
 
 export default function ProfileScreen() {
+  const router = useRouter();
+
+  const { asPath: pathname } = router;
+
+  const isPosts = pathname.includes('posts') || pathname === '/profile';
+
+  const isAbout = pathname.includes('about');
+
+  const isFriends = pathname.includes('friends');
+
+  const isPhotos = pathname.includes('photos');
+
+  const tabClasses =
+    'flex gap-1 px-4 py-1 items-center border-b-4 border-b-white';
+
+  const activeTabClasses =
+    'flex gap-1 px-4 py-1 items-center border-socialBlue border-b-4 text-socialBlue font-bold';
+
   return (
     <Layout>
       <Card noPadding={true}>
@@ -27,8 +47,8 @@ export default function ProfileScreen() {
             </div>
             <div className="mt-10 flex gap-1">
               <Link
-                href={'/'}
-                className="flex gap-1 px-4 py-1 items-center border-socialBlue border-b-4 text-socialBlue font-bold"
+                href={'/profile/posts'}
+                className={isPosts ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,8 +67,8 @@ export default function ProfileScreen() {
                 Posts
               </Link>
               <Link
-                href={'/'}
-                className="flex gap-1 px-4 py-1 items-center border-b-4 border-b-white"
+                href={'/profile/about'}
+                className={isAbout ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +87,8 @@ export default function ProfileScreen() {
                 About
               </Link>
               <Link
-                href={'/'}
-                className="flex gap-1 px-4 py-1 items-center border-b-4 border-b-white"
+                href={'/profile/friends'}
+                className={isFriends ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,8 +107,8 @@ export default function ProfileScreen() {
                 Friends
               </Link>
               <Link
-                href={'/'}
-                className="flex gap-1 px-4 py-1 items-center border-b-4 border-b-white"
+                href={'/profile/photos'}
+                className={isPhotos ? activeTabClasses : tabClasses}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +130,66 @@ export default function ProfileScreen() {
           </div>
         </div>
       </Card>
-      <PostCard />
+      {isPosts && (
+        <div>
+          <PostCard />
+        </div>
+      )}
+      {isAbout && (
+        <Card>
+          <h2 className="text-3xl mb-2">About Me</h2>
+          <p className="mb-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+        </Card>
+      )}
+      {isFriends && (
+        <div>
+          <Card>
+            <h2 className="text-3xl mb-2">Friends</h2>
+            <div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+              <div className="border-b border-b-gray-100 p-4 -mx-4">
+                <FriendInfo />
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
+      {isPhotos && (
+        <div>
+          <Card>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img src="" alt="" />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img src="" alt="" />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img src="" alt="" />
+              </div>
+              <div className="rounded-md overflow-hidden h-48 flex items-center shadow-md">
+                <img src="" alt="" />
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
     </Layout>
   );
 }
