@@ -29,3 +29,5 @@
 7. Profile page
 
 8. Profile about / friends / photos
+
+9. Saved post page
