@@ -25,3 +25,5 @@
    1. npm i react-clickout-handler
 
 6. Animation on sidebar & dropdown
+
+7. Profile page

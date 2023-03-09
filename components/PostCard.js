@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Avatar from './Avatar';
 import Card from './Card';
 import ClickOutHandler from 'react-clickout-handler';
+import Link from 'next/link';
 
 export default function PostCard() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -20,12 +21,19 @@ export default function PostCard() {
     <Card>
       <div className="flex gap-3">
         <div>
-          <Avatar />
+          <Link href={'/profile'} className="cursor-pointer">
+            <Avatar />
+          </Link>
         </div>
         <div className="grow">
           <p>
-            <a className="font-semibold">Dhanu Kumar</a> shared a
-            <a className="text-socialBlue"> post</a>
+            <Link
+              href={'/profile'}
+              className="mr-1 font-semibold cursor-pointer hover:underline"
+            >
+              Dhanu Kumar
+            </Link>
+            shared a <a className="text-socialBlue"> post</a>
           </p>
           <p className="text-gray-500 text-sm">2 hours ago</p>
         </div>
