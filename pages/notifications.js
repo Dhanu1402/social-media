@@ -3,7 +3,7 @@ import Avatar from '../components/Avatar';
 import Card from '../components/Card';
 import Layout from '../components/Layout';
 
-export default function notifications() {
+export default function NotificationsScreen() {
   return (
     <Layout>
       <h1 className="text-6xl mb-4 text-gray-300">Notifications</h1>
