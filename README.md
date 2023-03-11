@@ -31,3 +31,5 @@
 8. Profile about / friends / photos
 
 9. Saved post page
+
+10. Notifications page
