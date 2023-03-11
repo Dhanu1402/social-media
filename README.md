@@ -35,3 +35,5 @@
 10. Notifications page
 
 11. Login page
+
+12. Styling for mobiles
