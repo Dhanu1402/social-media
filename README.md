@@ -37,3 +37,15 @@
 11. Login page
 
 12. Styling for mobiles
+
+13. setting up superbase and login
+    1. setting up Google logins for your application consists of 3 parts:
+       1. Create and configure a Google Project on the Google Cloud Platform Console
+       2. Add your Google OAuth keys to your Supabase Project
+       3. Add the login code to your Supabase JS Client App :- npm install @supabase/supabase-js
+       4. npm install @supabase/auth-helpers-nextjs :- For next.js
+       5. npm install @supabase/auth-helpers-react :- For react.js
+       6. set up environment variables
+       7. setup in app.js
+
+// xewwy7-bokjeG-zokjur

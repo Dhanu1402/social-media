@@ -111,7 +111,7 @@ export default function NavigationCard() {
           </svg>
           <span className="hidden md:block">Notifications</span>
         </Link>
-        <Link href="" className={nonActiveElementClasses}>
+        <Link href="/login" className={nonActiveElementClasses}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
