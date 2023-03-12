@@ -38,7 +38,7 @@
 
 12. Styling for mobiles
 
-13. setting up superbase and login
+13. setting up supabase and login
 
     1. setting up Google logins for your application consists of 3 parts:
        1. Create and configure a Google Project on the Google Cloud Platform Console
@@ -50,5 +50,7 @@
        7. setup in app.js
 
 14. Logout
+
+15. User profile table in supabase
 
 // xewwy7-bokjeG-zokjur
