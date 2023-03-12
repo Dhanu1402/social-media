@@ -53,4 +53,6 @@
 
 15. User profile table in supabase
 
+16. Show correct avatar and name on post form
+
 // xewwy7-bokjeG-zokjur
